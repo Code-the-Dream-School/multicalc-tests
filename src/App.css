@@ -25,22 +25,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "WorkSans Bold", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'WorkSans Bold', system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
-
 main {
-
   margin: auto;
   position: relative;
 }
-
 
 footer {
   position: sticky;

@@ -20,8 +20,8 @@ Follow these instructions to get a copy of the project up and running on your lo
    ```sh
    cd multicalc
    ```
-4. Install the dependencies:
 
+4. Install the dependencies:
 
    ```sh
    npm install
@@ -47,8 +47,7 @@ npm run test
 
 This will execute the test suite and display the results in the terminal.
 
-- Be sure to pay close attention to *all* of the text each test outputs.
+- Be sure to pay close attention to _all_ of the text each test outputs.
 - Fix each error highlighted by the tests.
 - Don't make any changes to any of the test files.
 - Once complete, open a PR against the forked repo and submit the link with the assignment form.
-
