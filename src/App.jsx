@@ -7,9 +7,9 @@ import { OperandContext } from './context/OperandContext';
 function App() {
   const [operand, setOperand] = useState(0);
 
-  return (
+  return ( // the app.test is looking for h1 "Multi-Calc" and was originally without hyphen "MultiCalc"
     <main>
-      <h1>MultiCalc</h1>
+      <h1>Multi-Calc</h1> 
       <OperandContext.Provider value={{ operand, setOperand }}>
         <FormWrapper />
         <CalculatorWrapper />
