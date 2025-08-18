@@ -7,15 +7,15 @@ function Calculator() {
   const { operand } = useContext(OperandContext);
   const addOne = useMemo(() => {
     return operand + 1;
-  }, [operand]);
+  }, [operand, 1]);
 
   const cubed = useMemo(() => {
-    return operand ** 2;
-  }, [operand]);
+    return operand ** 3;
+  }, [operand, 3]);
 
   const multiplyByThree = useMemo(() => {
     operand * 3;
-  }, [operand]);
+  }, [operand, 3]);
 
   const squareRoot = useMemo(() => {
     return Math.sqrt(operand);
