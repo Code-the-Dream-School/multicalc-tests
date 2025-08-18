@@ -7,7 +7,7 @@ describe('App test suite', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
     expect(
-      screen.getByRole('heading', { level: 1, name: /Multi-Calc/i })
+      screen.getByRole('heading', { level: 1, name: /MultiCalc/i })
     ).toBeInTheDocument();
   });
 });
