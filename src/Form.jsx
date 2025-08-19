@@ -19,6 +19,7 @@ function Form() {
     <form>
       <label htmlFor="value">Calculate with: </label>
       <input
+        data-testid="input"
         type="number"
         id="value"
         value={workingOperand}
