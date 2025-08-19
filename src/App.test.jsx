@@ -5,9 +5,8 @@ import { render, screen } from '@testing-library/react';
 describe('App test suite', () => {
   it('contains a `main` html element', () => {
     render(<App />);
+    screen.debug()
     expect(screen.getByRole('main')).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { level: 1, name: /Multi-Calc/i })
-    ).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: /Multi-Calc/i })).toBeInTheDocument();
   });
 });
