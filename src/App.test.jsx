@@ -1,13 +1,31 @@
 import { describe, expect, it } from 'vitest';
-import App from './App';
 import { render, screen } from '@testing-library/react';
+import { OperandContext } from './context/OperandContext';
+import Calculator from './Calculator';
 
-describe('App test suite', () => {
-  it('contains a `main` html element', () => {
-    render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { level: 1, name: /Multi-Calc/i })
-    ).toBeInTheDocument();
+describe('Calculator', () => {
+  it('calculates cubed value correctly', () => {
+    const operand = 2;
+    render(
+      <OperandContext.Provider value={{ operand }}>
+        <Calculator />
+      </OperandContext.Provider>
+    );
+
+    const cubedResult = screen.getByText('Cubed').nextSibling.textContent;
+    expect(cubedResult).toBe('8'); // 2 ** 3 = 8
+  });
+
+  it('calculates multiply by three value correctly', () => {
+    const operand = 3;
+    render(
+      <OperandContext.Provider value={{ operand }}>
+        <Calculator />
+      </OperandContext.Provider>
+    );
+
+    const multiplyByThreeResult =
+      screen.getByText('Multiply by 3').nextSibling.textContent;
+    expect(multiplyByThreeResult).toBe('9'); // 3 * 3 = 9
   });
 });
