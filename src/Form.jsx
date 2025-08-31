@@ -12,11 +12,11 @@ function Form() {
   function handleSubmit(e) {
     e.preventDefault();
     if (workingOperand != '') {
-      setOperand(parseFloat(workingOperand));
+      setOperand(Number(workingOperand));
     }
   }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="value">Calculate with: </label>
       <input
         type="number"
@@ -24,11 +24,11 @@ function Form() {
         value={workingOperand}
         onChange={(e) => setWorkingOperand(e.target.value)}
       />
-      <button onClick={handleSubmit} disabled={workingOperand === ''}>
-        Submit
-      </button>
+      <button onClick={handleSubmit} disabled={workingOperand === ''}> Submit     
+           </button>
     </form>
   );
+
 }
 
 export default Form;
